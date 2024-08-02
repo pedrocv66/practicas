@@ -1,0 +1,28 @@
+<!--
+Directiva es una funcionalidad que se la puede aplicar a una etiqueta desde el HTML
+
+ej: *ngFor -> repetititvas que va a recorrer una coleccion, iterando elemnto por 
+elemento, y lo va a mostrar sin repetir el codigo del html
+
+ej: *ngFor -> condicional que va a mostrar u ocultar un elemento segun la condicion 
+-->
+<div *ngFor="let i of info" class="contenido">
+    <mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <!--interpolacion: acceder a informacion del ts desde el html-->
+      <mat-card-title>{{i.titulo}}</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{i.imagen}}" alt="{{i.alt}}">
+    <mat-card-content>
+      <p>
+        {{i.descripcion}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+  </div>
